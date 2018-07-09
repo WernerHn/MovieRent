@@ -1,0 +1,2 @@
+module RentAMoviesHelper
+end

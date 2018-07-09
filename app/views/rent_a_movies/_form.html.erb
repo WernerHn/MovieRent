@@ -1,0 +1,17 @@
+<%= form_with(model: rent_a_movie, local: true) do |form| %>
+  <% if rent_a_movie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rent_a_movie.errors.count, "error") %> prohibited this rent_a_movie from being saved:</h2>
+
+      <ul>
+      <% rent_a_movie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

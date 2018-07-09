@@ -1,0 +1,20 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+  <%= render @cart %>
+
+<div id ="cart_title">Your Cart</div>
+<table>
+  <%= render(@cart.line_movies) %>
+
+<tr class·="total_line">
+  <td colspan="2">Total</td>
+<td class="total_cell"><%= number_to_currency(@cart.total_price) %> </td>
+  <tr>
+    <td><%= button_to 'Empty Cart', @cart, method: :delete,
+                      confirm: 'Are you sure?' %></td>
+</table>
+<div id="cart">
+  <%= render current_cart %>
+</div>

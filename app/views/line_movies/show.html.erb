@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Movie:</strong>
+  <%= @line_movie.movie_id %>
+</p>
+
+<p>
+  <strong>Cart:</strong>
+  <%= @line_movie.cart_id %>
+</p>
+
+<%= link_to 'Edit', edit_line_movie_path(@line_movie) %> |
+<%= link_to 'Back', line_movies_path %>
