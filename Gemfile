@@ -13,7 +13,7 @@ gem 'devise'
 gem 'rails', '~> 5.2.0'
 #data base for production and development
 group :production do
-  gem 'pg',    '0.17.1'
+  gem 'pg', '0.18.1'
 end
 
 group :development do
