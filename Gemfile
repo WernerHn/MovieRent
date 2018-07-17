@@ -11,8 +11,14 @@ gem 'jquery-rails'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#data base for production and development
+group :production do
+  gem 'pg',    '0.17.1'
+end
+
+group :development do
+  gem 'sqlite3'
+end
 # Use for load images
 gem 'carrierwave'
 # Use Puma as the app server
