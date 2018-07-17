@@ -1,16 +1,19 @@
-<div class="cart_finished", id="js-cart-finish" style="display:none;"></div>
-<table>
-  <div>Your Cart</div>
+<% javascript_include_tag 'make_a_rent.js' %>
+
+<div class = container>
+  <div><h2>Your Cart</h2></div>
   <%= render(cart.line_movies) %>
   <tr class="total_line">
     <td colspan="2">Total</td>
     <td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
   </tr>
-  <tr>
-    <td><%= button_to 'Empty cart', cart, method: :delete,
-                  confirm: 'Are you sure?' %></td>
 
-    <td><%= link_to 'finish', carts_message_path, remote: true %></td>
-  </tr>
-</table>
+
+    <div class="row" align="center">
+    <div class="col-xs-6"><%= button_to 'Empty cart', cart, method: :delete,
+                  confirm: 'Are you sure?' %></div>
+    <div class="col-xs-6"><button id="js-cart-finish">Make a rent</button></div>
+
+  </div>
+</div>
 

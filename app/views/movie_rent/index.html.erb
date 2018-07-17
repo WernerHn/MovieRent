@@ -1,27 +1,26 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<style type="text/css">
+  @media  screen and (max-width: 767px) {
+    img.ima {
+      max-width: 100%; !important;
+      height: 100%; !important;
+      display: block; !important;
+    }  }
+</style>
 
-    <style type="text/css">
-      @media  screen and (max-width: 767px) {
-        img.ima {
-          max-width: 100% !important;
-        }  }
-    </style>
-
-
-
-
-  <body height="100%" style="background-color: black">
-
-<table width="100%"  border="0" height="100%">
-  <tr>
-    <td ><%= image_tag(home[ale(2)].image_url.to_s, width: '700px', height: '450px', class:"ima") if home[ale(2)].image_url.to_s.present? %></td>
-    <td ><%= image_tag home[ale(2..3)].image_url.to_s, width: '700px', height: '450px', class:"ima" if home[ale(2..3)].image_url.to_s.present? %></td>
-  </tr>
-  <td><%= image_tag home[ale(4..5)].image_url.to_s, width: '700px', height: '450px', class:"ima" if home[ale(4..5)].image_url.to_s.present? %></td>
-  <td><%= image_tag home[ale(6..7)].image_url.to_s, width: '700px', height: '450px', class:"ima" if home[ale(6..7)].image_url.to_s.present? %></td>
-  </tr>
-</table>
+<div class="container-fluid">
+<body style="background-color: black">
+<div>
+  <div class="row">
+    <div class="col-xs col-md-6" align="center"><%= image_tag home[ale(2)].image_url.to_s, width: '100% \9', height: '450px', class:"ima" if home[ale(2)].image_url.to_s.present? %></div>
+    <div class="col-xs col-md-6"><%= image_tag home[ale(2..3)].image_url.to_s, width: '100% \9', class:"img-responsive" if home[ale(2..3)].image_url.to_s.present? %></div>
   </div>
-  </body>
+  <div class="row">
+    <div class="col-xs col-md-6" align="center"><%= image_tag home[ale(4..5)].image_url.to_s, width: '100% \9', class:"img-responsive" if home[ale(4..5)].image_url.to_s.present? %></div>
+    <div class="col-xs col-md-6"><%= image_tag home[ale(6..7)].image_url.to_s, width: '100% \9', class:"img-responsive" if home[ale(6..7)].image_url.to_s.present? %></div>
+  </div>
+</div>
+</body>
+</div>
 

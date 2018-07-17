@@ -61,6 +61,17 @@ class MoviesController < ApplicationController
     end
   end
 
+
+
+  def make_a_rent
+    result = [  {message: 'Your cart has been finished', status: :ok}, {message: 'You can not rent because you have debts', status: :unprocessable_entity} ]
+     response = result[rand(0..1)]
+      current_cart.destroy if response[:status] == :ok
+    respond_to do |format |
+      format.json { render json: { message: response[:message]}, status: response[:status]}
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_movie

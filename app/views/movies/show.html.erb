@@ -1,24 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong> title:</strong>
-  <%= @movie.title %>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6"><h1> Title:</h1><h3><%= @movie.title %></h3></div>
+    <div class="col-xs-6"><h1>Price:</h1><h3>$<%= @movie.price %></h3>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-xs-12"><h1>Description:</h1></div>
+  </div>
+  <div class="row">
+  <div class="col-xs-12"><h3><%= @movie.description %></h3></div>
+</div>
+  <p>
+  <%= image_tag @movie.image_url.to_s, class:'img-responsive'  if @movie.image_url.to_s.present? %>
 </p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @movie.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= image_tag(@movie.image_url.to_s) if @movie.image_url.to_s.present? %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @movie.price %>
-</p>
-
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
+  <h1><%= link_to 'Edit', edit_movie_path(@movie) %> |
+  <%= link_to 'Back', movies_path %></h1>
+</div>

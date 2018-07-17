@@ -1,29 +1,20 @@
-
-<%= render current_cart %>
-<h1>Movies</h1>
-<div id="cart"></div>
-<table>
-  <thead>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Cover</th>
-    <th>Price</th>
-    <th colspan="3"></th>
-  </tr>
-  </thead>
-
+<div class="container">
+<div class="col-xs-12" align="center"><%= render current_cart %></div>
+<div class="col-xs-12" align="center"><h1>Movies</h1></div>
 
   <% @movies.each do |movie| %>
-      <tr>
-        <td class="title"><h3><%= movie.title %></h3></td>
-        <td> <%= movie.description %></td>
-        <td><%= image_tag movie.image_url.to_s, width: '40%' if movie.image_url.to_s.present? %></td>
-        <td>$<%= movie.price %></td>
-        <td><%= button_to 'Add to Cart', line_movies_path(movies_id: movie) %></td>
 
-      </tr>
+      <div class="row">
+        <div class="col-xs-9"><h3><%= movie.title %></h3></div>
+        <div class="col-xs-3"><h3>$<%= movie.price %></h3></div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12"><%= image_tag movie.image_url.to_s, width: '100%' if movie.image_url.to_s.present? %></div>
+      </div>
+
+<div class="row">
+       <div class="col-xs-12" align="center"><%= button_to 'Add to Cart', line_movies_path(movies_id: movie) %></div>
+      </div>
   <% end %>
-</table>
-
-<%= link_to 'New Movie', new_movie_path %>
+</div>
