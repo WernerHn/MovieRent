@@ -14,10 +14,9 @@
       </div>
 
       <div><%= link_to 'Details', movie %> | <%= link_to 'Edit', edit_movie_path(movie) %></div>
-      <div><%= link_to 'Eliminate', movie, method: :delete, data: { confirm: 'Are you sure?' } %></div>
   <% end %>
 </div><br>
 
 <div id="task-form" style="display:none;"></div>
-<%= link_to 'New Movie', new_movie_path, remote: true %>
+<div align="center"><%= link_to 'New Movie', new_movie_path, remote: true %></div>
 
