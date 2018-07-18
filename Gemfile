@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.3.0'
 
+
+
 # for views xD
 gem 'bootstrap3-rails'
 # for ajax request
@@ -16,12 +18,12 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 #data base for production and development
-group :production do
-  gem 'pg', '0.18.1'
-end
+gem 'pg', '0.18.1'
 
-group :development do
+
+group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails'
 end
 # Use for load images
 gem 'carrierwave'
