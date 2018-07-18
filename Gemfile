@@ -9,6 +9,10 @@ gem 'bootstrap3-rails'
 gem 'jquery-rails'
 # from login / logout
 gem 'devise'
+# for admin
+gem 'activeadmin', github: 'gregbell/active_admin'
+# resources for admin
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 #data base for production and development

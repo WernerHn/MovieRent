@@ -15,8 +15,4 @@ class Cart < ApplicationRecord
     line_movies.to_a.sum { |movie|
       movie.total_price}
   end
-
-
-
-
-  end
+end

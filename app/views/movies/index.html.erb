@@ -13,7 +13,8 @@
       <div class="col-xs-12"><%= image_tag movie.image_url.to_s, width: '100%', align:'center' if movie.image_url.to_s.present? %></div>
       </div>
 
-      <div><%= link_to 'Details', movie %> | <%= link_to 'Edit', edit_movie_path(movie) %></div>
+      <div><%= link_to 'Details', movie %>
+      </div>
   <% end %>
 </div><br>
 

@@ -1,12 +1,15 @@
 class Movie < ApplicationRecord
   has_many :line_movies
   mount_uploader :image_url, PictureUploader
-  before_destroy :ensure_not_referenced_by_any_line_item
+  before_destroy :no_referenced
+  validates :title,  :presence => true
+  validates :price,  :presence => true
+  validates :image_url, :presence => true
 
 
   private
 
-  def ensure_not_referenced_by_any_line_item
+  def no_referenced
     if line_movies.empty?
       return true
     else
