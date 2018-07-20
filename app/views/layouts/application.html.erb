@@ -23,6 +23,7 @@
         <ul class="nav navbar-nav">
           <li><a href="/movies">Movies</a></li>
           <li><%= link_to "Rent a movie!", rent_a_movies_path %></li>
+          <li><%= link_to "Yours cart", movie_rent_index_path %></li>
         </ul>
         <ul class="navbar-text pull-right">
           <% if user_signed_in? %>

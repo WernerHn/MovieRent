@@ -61,8 +61,6 @@ class MoviesController < ApplicationController
     end
   end
 
-
-
   def make_a_rent
     result = [  {message: 'Your cart has been finished', status: :ok}, {message: 'You can not rent because you have debts', status: :unprocessable_entity} ]
      response = result[rand(0..1)]

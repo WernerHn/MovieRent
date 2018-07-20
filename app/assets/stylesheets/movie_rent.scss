@@ -1,8 +1,24 @@
 // Place all the styles related to the MovieRent controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-div {
-  align: left;
-
+@media only screen and (max-width: 768px) {
+  div.ima {
+    max-width: 1000px;
+    height: 200px;
+    background-size: cover;
+    background: 50% no-repeat;
+    background-size:contain;
+    display:block;
+  }  }
+.ima {
+  max-width: 800px;
+  height: 500px;
+  background-size: cover;
+  background: 50% no-repeat;
+  background-size:contain;
 }
+@media only screen and (min-width: 768px) {
+.img {
+  height: 300px;
+
+}}

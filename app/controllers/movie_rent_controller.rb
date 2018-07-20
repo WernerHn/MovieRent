@@ -4,3 +4,6 @@ class MovieRentController < ApplicationController
     @cart = current_cart
   end
 end
+
+
+
